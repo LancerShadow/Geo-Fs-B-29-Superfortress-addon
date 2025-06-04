@@ -1,7 +1,45 @@
 {
-  "Aircraft": [
+  "mass": 400000,
+  "tensorFactor": 0.005,
+  "dragFactor": 20,
+  "gearTravelTime": 25,
+  "flapsTravelTime": 3,
+  "flapsSteps": 4,
+  "airbrakesTravelTime": 0.5,
+  "reverse": true,
+  "zeroThrustAltitude": 70000,
+  "minRPM": 1000,
+  "maxRPM": 10000,
+  "driveRatio": 0.25,
+  "engineInertia": 1,
+  "startupTime": 15,
+  "startAltitude": 4.5,
+  "startTilt": 0,
+  "minimumSpeed": 200,
+  "autopilot": {
+    "pitchAnglePID": [0.002, 0.001, 0.01],
+    "elevatorPitchPID": [0.05, 0.0001, 1e-7],
+    "bankAnglePID": [0.3, 0.001, 0.01],
+    "aileronsRollPID": [0.5, 0.001, 0.01],
+    "targetBankAngleRatio": 1
+  },
+  "motionSensitivity": 2,
+  "instruments": {
+    // ... (rest of the A380 JSON) ...
+  },
+  "parts": [
     {
-      "name": "McDonnell Douglas MD-11 (ADSB)",
-      "url": "https://www.geo-fs.com/backend/aircraft/repository/md11_267286_5387/",
-      "id": 1023
-    }
+      "name": "root",
+      "type": "root",
+      "position": [0, 0, 0],
+      "model": "B-29 Superfortress.glb", // <-- MODIFIED
+      "textures": [
+        {
+          "index": 3,
+          "filename": "texture_"
+        }
+      ]
+    },
+    // ... (rest of the A380 JSON) ...
+  ]
+}
