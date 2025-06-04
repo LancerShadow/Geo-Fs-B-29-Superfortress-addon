@@ -99,7 +99,7 @@
         "name": "root",
         "type": "root",
         "position": [0, 0, 0],
-        "model": "a380.gltf",
+        "model": "B-29 Superfortress.glb",
         "textures": [
           {
             "index": 3,
