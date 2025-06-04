@@ -1,5 +1,4 @@
-[
-  {
+ {
     "mass": 400000,
     "tensorFactor": 0.005,
     "dragFactor": 20,
@@ -1710,4 +1709,3 @@
     "cockpitModel": true,
     "shadowBox": [45, 44]
   }
-]
