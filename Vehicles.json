@@ -1,0 +1,313 @@
+{
+    "mass": 400000,
+    "tensorFactor": 0.005,
+    "dragFactor": 20,
+    "gearTravelTime": 25,
+    "flapsTravelTime": 3,
+    "flapsSteps": 4,
+    "airbrakesTravelTime": 0.5,
+    "reverse": true,
+    "zeroThrustAltitude": 70000,
+    "model": {               
+        "path": "B-29 Superfortress.glb",
+        "scale": 1.0,        
+        "rotation": [0, 0, 0],
+        "collision": true
+    },
+    "controlSurfaceEffectiveness": {
+        "elevator": 1,
+        "aileron": 1,
+        "rudder": 1
+    },
+    "maxSpeed": 350,
+    "maxLoad": 1000000,
+    "fuelCapacity": 100000,
+    "fuelConsumption": 200,
+    "engines": [
+        {
+            "position": [20, 20, 2],
+            "orientation": [0, 0, 0],
+            "thrust": 100000,
+            "maxrpm": 10000,
+            "minrpm": 1000,
+            "propeller": {
+                "diameter": 10,
+                "diskArea": 0.1,
+                "pitch": 0.1,
+                "efficiency": 0.8
+            }
+        },
+        {
+            "position": [-20, 20, 2],
+            "orientation": [0, 0, 0],
+            "thrust": 100000,
+            "maxrpm": 10000,
+            "minrpm": 1000,
+            "propeller": {
+                "diameter": 10,
+                "diskArea": 0.1,
+                "pitch": 0.1,
+                "efficiency": 0.8
+            }
+        },
+        {
+            "position": [20, -20, 2],
+            "orientation": [0, 0, 0],
+            "thrust": 100000,
+            "maxrpm": 10000,
+            "minrpm": 1000,
+            "propeller": {
+                "diameter": 10,
+                "diskArea": 0.1,
+                "pitch": 0.1,
+                "efficiency": 0.8
+            }
+        },
+        {
+            "position": [-20, -20, 2],
+            "orientation": [0, 0, 0],
+            "thrust": 100000,
+            "maxrpm": 10000,
+            "minrpm": 1000,
+            "propeller": {
+                "diameter": 10,
+                "diskArea": 0.1,
+                "pitch": 0.1,
+                "efficiency": 0.8
+            }
+        }
+    ],
+    "collisionThreshold": 0.1,
+    "parts": [
+        {
+            "name": "root",
+            "type": "root",
+            "position": [0, 0, 0],
+            "model": "B-29 Superfortress.glb",
+            "textures": [
+                {
+                    "index": 3,
+                    "filename": "texture_"
+                }
+            ]
+        },
+        {
+            "name": "gear-main-left",
+            "type": "gear",
+            "position": [0, 0, 0],
+            "animation": {
+                "type": "rotate",
+                "frame": "gear",
+                "axis": "X",
+                "value": "gearPosition",
+                "ratio": -90
+            }
+        },
+        {
+            "name": "gear-main-right",
+            "type": "gear",
+            "position": [0, 0, 0],
+            "animation": {
+                "type": "rotate",
+                "frame": "gear",
+                "axis": "X",
+                "value": "gearPosition",
+                "ratio": -90
+            }
+        },
+        {
+            "name": "gear-nose",
+            "type": "gear",
+            "position": [0, 0, 0],
+            "animation": {
+                "type": "rotate",
+                "frame": "gear",
+                "axis": "X",
+                "value": "gearPosition",
+                "ratio": -90
+            }
+        },
+        {
+            "name": "flaps-left",
+            "type": "flap",
+            "position": [0, 0, 0],
+            "animation": {
+                "type": "rotate",
+                "frame": "flap",
+                "axis": "X",
+                "value": "flapsPosition",
+                "ratio": -40
+            }
+        },
+        {
+            "name": "flaps-right",
+            "type": "flap",
+            "position": [0, 0, 0],
+            "animation": {
+                "type": "rotate",
+                "frame": "flap",
+                "axis": "X",
+                "value": "flapsPosition",
+                "ratio": -40
+            }
+        },
+        {
+            "name": "aileron-left",
+            "type": "control",
+            "position": [0, 0, 0],
+            "animation": {
+                "type": "rotate",
+                "frame": "aileron",
+                "axis": "X",
+                "value": "aileronPosition",
+                "ratio": -20
+            }
+        },
+        {
+            "name": "aileron-right",
+            "type": "control",
+            "position": [0, 0, 0],
+            "animation": {
+                "type": "rotate",
+                "frame": "aileron",
+                "axis": "X",
+                "value": "aileronPosition",
+                "ratio": 20
+            }
+        },
+        {
+            "name": "rudder",
+            "type": "control",
+            "position": [0, 0, 0],
+            "animation": {
+                "type": "rotate",
+                "frame": "rudder",
+                "axis": "Y",
+                "value": "rudderPosition",
+                "ratio": 20
+            }
+        },
+        {
+            "name": "elevator",
+            "type": "control",
+            "position": [0, 0, 0],
+            "animation": {
+                "type": "rotate",
+                "frame": "elevator",
+                "axis": "X",
+                "value": "elevatorPosition",
+                "ratio": -20
+            }
+        },
+        {
+            "name": "airbrakes",
+            "type": "airbrake",
+            "position": [0, 0, 0],
+            "animation": {
+                "type": "rotate",
+                "frame": "airbrake",
+                "axis": "X",
+                "value": "airbrakesPosition",
+                "ratio": 90
+            }
+        },
+        {
+            "name": "spoiler-left",
+            "type": "spoiler",
+            "position": [0, 0, 0],
+            "animation": {
+                "type": "rotate",
+                "frame": "spoiler",
+                "axis": "X",
+                "value": "spoilerPosition",
+                "ratio": 45
+            }
+        },
+        {
+            "name": "spoiler-right",
+            "type": "spoiler",
+            "position": [0, 0, 0],
+            "animation": {
+                "type": "rotate",
+                "frame": "spoiler",
+                "axis": "X",
+                "value": "spoilerPosition",
+                "ratio": 45
+            }
+        },
+        {
+            "name": "wheel-nose",
+            "type": "wheel",
+            "position": [0, 0, 0],
+            "animation": {
+                "type": "rotate",
+                "frame": "wheel",
+                "axis": "Y",
+                "value": "wheelPosition",
+                "ratio": 360
+            }
+        },
+        {
+            "name": "wheel-main-left",
+            "type": "wheel",
+            "position": [0, 0, 0],
+            "animation": {
+                "type": "rotate",
+                "frame": "wheel",
+                "axis": "Y",
+                "value": "wheelPosition",
+                "ratio": 360
+            }
+        },
+        {
+            "name": "wheel-main-right",
+            "type": "wheel",
+            "position": [0, 0, 0],
+            "animation": {
+                "type": "rotate",
+                "frame": "wheel",
+                "axis": "Y",
+                "value": "wheelPosition",
+                "ratio": 360
+            }
+        }
+    ],
+    "flight": {
+        "gear": {
+            "position": [0, 0, 0],
+            "orientation": [0, 0, 0]
+        },
+        "flaps": {
+            "position": [0, 0, 0],
+            "orientation": [0, 0, 0]
+        },
+        "airbrakes": {
+            "position": [0, 0, 0],
+            "orientation": [0, 0, 0]
+        },
+        "ailerons": {
+            "position": [0, 0, 0],
+            "orientation": [0, 0, 0]
+        },
+        "rudder": {
+            "position": [0, 0, 0],
+            "orientation": [0, 0, 0]
+        },
+        "elevator": {
+            "position": [0, 0, 0],
+            "orientation": [0, 0, 0]
+        }
+    },
+    "lights": [
+        {
+            "position": [0, 0, 0],
+            "type": "navigation"
+        },
+        {
+            "position": [0, 0, 0],
+            "type": "beacon"
+        }
+    ],
+    "cockpitModel": true,
+    "shadowBox": [45, 44]
+}
